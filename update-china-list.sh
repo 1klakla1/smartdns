@@ -1,8 +1,8 @@
 #/bin/sh
 mkdir -p /tmp/smartdns/
-wget -O /tmp/smartdns/china.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf
-wget -O /tmp/smartdns/apple.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf
-wget -O /tmp/smartdns/google.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf
+wget -O /tmp/smartdns/china.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf --no-check-certificate
+wget -O /tmp/smartdns/apple.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf --no-check-certificate
+wget -O /tmp/smartdns/google.conf https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf --no-check-certificate
 #合并
 cat /tmp/smartdns/apple.conf >> /tmp/smartdns/china.conf 2>/dev/null
 cat /tmp/smartdns/google.conf >> /tmp/smartdns/china.conf 2>/dev/null
